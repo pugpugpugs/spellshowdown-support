@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support page (common answers)
+    url: https://pugpugpugs.github.io/spellshowdown-support/support.html
+    about: Connection, sign-in, purchases, deleting your data and reporting names.
+  - name: Privacy Policy
+    url: https://pugpugpugs.github.io/spellshowdown-support/privacy.html
+    about: What Spell Showdown collects and how to delete it.

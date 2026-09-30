@@ -1,0 +1,86 @@
+:root {
+  --bg: #121a2e;
+  --surface: #1e2a44;
+  --surface-raised: #2a3b5f;
+  --outline: rgba(79, 116, 184, 0.4);
+  --text: #f7faff;
+  --muted: #b8c6e6;
+  --primary: #a855f7;
+  --gold: #ffc940;
+  --link: #c89bff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f5f3fb;
+    --surface: #ffffff;
+    --surface-raised: #efe8fb;
+    --outline: rgba(109, 43, 201, 0.25);
+    --text: #1b1530;
+    --muted: #4c4466;
+    --primary: #6d2bc9;
+    --gold: #8a5a00;
+    --link: #6d2bc9;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+header {
+  background: linear-gradient(135deg, #6d2bc9, #a855f7);
+  color: #fff;
+  padding: 20px 16px;
+}
+
+header .wrap { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 24px; }
+header a.brand { color: #fff; font-weight: 800; font-size: 1.3rem; text-decoration: none; letter-spacing: 0.02em; }
+header nav { display: flex; gap: 16px; flex-wrap: wrap; }
+header nav a { color: #fff; opacity: 0.9; text-decoration: none; font-weight: 600; }
+header nav a[aria-current="page"] { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+
+.wrap { max-width: 760px; margin: 0 auto; }
+
+main { padding: 24px 16px 48px; }
+
+h1 { font-size: 1.8rem; line-height: 1.25; margin: 0 0 8px; }
+h2 { font-size: 1.25rem; margin: 32px 0 8px; color: var(--gold); }
+h3 { font-size: 1.05rem; margin: 20px 0 4px; }
+p, li { color: var(--text); }
+.muted { color: var(--muted); }
+a { color: var(--link); }
+ul { padding-left: 1.25rem; }
+li { margin: 4px 0; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--outline);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin: 16px 0;
+}
+
+.button {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  margin: 4px 0;
+}
+
+.links { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.links a.card { display: block; text-decoration: none; color: var(--text); margin: 0; }
+.links a.card strong { color: var(--gold); display: block; font-size: 1.1rem; }
+
+footer { padding: 24px 16px; border-top: 1px solid var(--outline); color: var(--muted); font-size: 0.9rem; }
+footer a { color: var(--muted); }

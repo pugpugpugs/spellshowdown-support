@@ -1,0 +1,44 @@
+name: Support request
+description: Report a problem with Spell Showdown or ask a question.
+title: "[Support] "
+labels: ["support"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This tracker is public.** Everyone can read what you post here.
+
+        Do **not** post passwords, Apple ID credentials, payment or card information, your email address or phone number, or any other sensitive personal information. We will never ask for them.
+
+        Common answers are on the [Support page](https://pugpugpugs.github.io/spellshowdown-support/support.html).
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's the problem?
+      description: What happened, and what did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: If you can make it happen again, list the steps.
+      placeholder: |
+        1. Open Versus
+        2. ...
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: App version (if known)
+      description: On iPhone, Settings > General > iPhone Storage > Spell Showdown shows it.
+    validations:
+      required: false
+  - type: input
+    id: device
+    attributes:
+      label: Device and iOS version (if relevant)
+      placeholder: e.g. iPhone 15, iOS 26
+    validations:
+      required: false
